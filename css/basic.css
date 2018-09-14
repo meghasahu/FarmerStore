@@ -1,0 +1,43 @@
+body{
+
+	background: #f9fbe7;
+	padding: 0;
+	margin:0;
+}
+
+header
+{
+	background-color:#558b2f;
+	padding:0.1%;
+	width:100%;
+	position: relative;
+	color:white;
+	margin-bottom: 0;
+	
+}
+
+
+@media only screen and (min-width: 768px){
+	/*for desktop*/
+	class="col-1"{ width=8.33%;height: 25% }
+	class="col-2"{ width=16.66%;}
+	class="col-3"{ width=25%; }
+	class="col-4"{ width=33.33%; }
+	class="col-5"{ width=41.66%; }
+	class="col-6"{ width=49.99%; }
+	class="col-7"{ width=58.32%; }
+	class="col-8"{ width=66.65%; }
+	class="col-9"{ width=75%; }
+	class="col-10"{ width=83.33%; }
+	class="col-11"{ width=91.66%; }
+	class="col-12"{ width=100%; }
+
+}
+
+@media only screen and(max-width: 768px){
+	/*for mobile*/
+	[class*="col-"]{
+		
+	}
+
+}

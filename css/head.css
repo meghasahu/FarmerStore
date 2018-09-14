@@ -1,0 +1,70 @@
+body{
+margin:0%;
+padding:0%;
+background: url(background_rain.jpeg);
+background-position: center;
+background-attachment:fixed;
+background-size: cover;
+font-family: sans-serif;
+}
+.login_form{
+  width:30%;
+  height:70%;
+  margin-top:20%;
+  margin-left:50%;
+  background:rgba(0,0,0,0.5);
+  color:#fff;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.login_img
+{
+  width:20%;
+  height:20%;
+  position: absolute;
+  top:-50px;
+  left:calc(50% - 50px);
+}
+h1{
+  margin:20%;
+  padding:0;
+  top:20%;
+  text-align: center;
+}
+.login_form input{
+  width:95%;
+  margin:10px;
+  margin-bottom: 20px;
+}
+
+.login_form input[type="email"] , input[type="password"]
+{
+  background: transparent;
+  border:none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  color: white;
+  font-size: 100%
+}
+
+.login_form input::before{
+  color:white;
+}
+
+.login_form a{
+  margin:10px;
+}
+a:visited{
+  color:pink;
+}
+.login_form input[type="button"], input[type="submit"] {
+  background: transparent;
+  border:none;
+  height:40px;
+  border-bottom: 1px solid #fff;
+  font-size: 100%;
+  color:white;
+
+}

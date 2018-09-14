@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/forForms.css"></link>
+<link rel="stylesheet" type="text/css" href="css/reg.css"></link>
+<link rel="stylesheet" type="text/css" href="css/basic.css"></link>
+
+
+<title >registeration form</title>
+</head>
+<body class="p1">
+<header>
+     <div>
+     <img class="icon" src="images/iconFarm.png" alt="icon" width="5%" height="5%">
+     <h2 >Famer Store</h2>
+     </div>
+</header>
+
+<div class="modal size">
+<form >
+<h1 >Registeration Form</h1>
+<table align="center">
+<tr>
+<td>
+Register as:
+</td>
+<td>
+<input class="list" list="users" name="user">
+<datalist id="users">
+<option value="Seller">
+<option value="Buyer">
+</datalist>
+</td>
+<td>
+Title:
+</td>
+<td>
+<input class="list" list="title" name="title">
+<datalist id="title">
+<option value="Mr."></option>
+<option value="Ms."></option>
+<option value="Mrs."></option>
+</datalist>
+</td>
+</tr>
+<tr>
+<td>
+First Name:
+</td>
+<td>
+<input type="text" name="first name">
+</td>
+<td>
+Middle Name:
+</td>
+<td>
+<input type="text" name="first name">
+</td>
+</tr>
+<tr>
+<td>
+Last Name:
+</td>
+<td>
+<input type="text" name="first name">
+</td>
+<td>
+Gender:
+</td>
+<td>
+<input class="list" list="gender" name="gender">
+<datalist id="gender">
+<option value="Male"></option>
+<option value="Female"></option>
+</datalist>
+</td>
+</tr>
+<tr>
+<td>
+Date of Birth:
+</td>
+<td>
+<input class="list" type="date" name="date">
+</td>
+<td >
+Address(street):
+</td>
+<td>
+<textarea col="30" row="6" name="address"></textarea>
+</td>
+</tr>
+<tr>
+<td>
+City/Village:
+</td>
+<td>
+<input type="text" name="city/village">
+</td>
+<td>
+Pin Code:
+</td>
+<td>
+<input type="text" name="pin" pattern="[0-9]{6}">
+</td>
+</tr>
+<tr>
+<td>
+Mobile No.:
+</td>
+<td>
+<select class="h3">
+<option>+91</option>
+</select>
+<input class="list" type="phone" name="phone" pattern="[0-9]{10}">
+</td>
+<td>
+Email:
+</td>
+<td>
+<input type="email" name="email">
+</td>
+</tr>
+<tr>
+<td>
+Account Holder's Name<br>
+(as per bank details):
+</td>
+<td>
+<input type="text" name="holder">
+</td>
+<td>
+Bank Name:
+</td>
+<td>
+<input type="text" name="bank name">
+</td>
+</tr>
+<tr>
+<td>
+Bank Account No:
+</td>
+<td>
+<input type="digits" name="acc_no" pattern="[0-9]{12}">
+</td>
+<td>
+IFSC Code:
+</td>
+<td>
+<input type="text" name="IFSC">
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<input type="submit" style="float:center-right" name="submit">
+</td>
+<td>
+<input type="reset"  style="float:center-right" name="reset">
+</td>
+<td>
+</td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>

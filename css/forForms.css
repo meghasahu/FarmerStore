@@ -1,0 +1,168 @@
+body{
+	margin:0;
+	padding: 0;
+	height:100%;
+}
+
+.icon{
+	margin-left: 5px;
+	
+}
+
+header h2{
+	display:inline;
+
+}
+
+.change{
+	display: block;
+	position: fixed;
+	min-width:40%;
+	min-height:40%;
+	margin-left: 35%;
+	margin-top: 5%;
+}
+
+
+.modal{
+	display: block;
+	position:fixed;
+	border-width: 10px solid #7cb342;
+	margin-top: 5px;
+	border-radius: 10px;
+	box-shadow: 0px 17px 10px 10px rgba(0,0,0,0.3);
+}
+
+.size{
+    width:70%;
+	margin-left: 15%;
+
+}
+
+.login1{
+	width:30%;
+	height:40%;
+
+}
+
+
+.login2{
+	display: none;
+	position:fixed;
+	width:30%;
+	height:40%;
+	border-width: 10px solid #7cb342;
+	margin-top: 5px;
+	border-radius: 10px;
+	box-shadow: 0px 17px 10px 10px rgba(0,0,0,0.3);
+
+}
+
+.login3{
+	display: none;
+	position:fixed;
+	width:30%;
+	height:40%;
+	border-width: 10px solid #7cb342;
+	margin-top: 5px;
+	border-radius: 10px;
+	box-shadow: 0px 17px 10px 10px rgba(0,0,0,0.3);
+}
+.login_form{
+	display: block;
+	width:80%;
+	margin-left: 10%;
+}
+
+h1{
+	background: #558b2f;
+	width:100%;
+	padding: 2px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+}
+
+.change li
+{
+	height:40px;
+	display: inline;
+	float: left;
+	box-shadow: 0 -5px 5px -5px rgba(0,0,0,0.2);
+}
+
+.change ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #f9fbe7;
+}
+
+.change li a{
+	text-decoration: none;
+	display: block;
+	padding: 14px 16px;
+	text-align: center;
+	border:1px solid #c5e1a5;
+
+
+}
+
+.change ul li a:hover{
+	cursor: pointer;
+	background-color: #558b2f;
+	color: black;
+}
+
+.active{
+	background-color: #558b2f;
+	color: white;
+}
+
+a:active{
+	background-color: #558b2f;
+	color: white;
+
+}
+	
+input[type="submit"], input[type="reset"]
+{
+	background-color: #558b2f;
+	color:white;
+	border:none;
+	width:100px;
+	height:40px;
+	padding:10px;
+	margin-top: 10px;
+	border-radius: 4px;
+	box-shadow: 0px 20px 10px -05px rgba(0,0,0,0.2);
+
+}
+input[type="submit"],input[type="reset"]
+{
+	
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+.login_form a{
+	margin-right:5px;
+	margin-top: 25px;
+}
+
+
+
+textarea ,input[type="email"], input[type="password"],input[type="text"],input[type="digits"]
+{
+	border:none;
+	border-bottom: 1px solid #558b2f;
+	background-color: #f9fbe7;
+	padding:2px;
+    margin-bottom: 5px;
+    width:100%;
+	height:30px;
+	background: transparent;
+	outline: none;
+
+}

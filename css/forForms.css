@@ -11,7 +11,14 @@ body{
 
 header h2{
 	display:inline;
+	width: 100%;
+}
 
+.form{
+	border:1px solid #7cb342;
+	box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.7);
+	padding: 10px;
+	margin:5px;
 }
 
 .change{
@@ -131,29 +138,40 @@ input[type="submit"], input[type="reset"]
 	background-color: #558b2f;
 	color:white;
 	border:none;
-	width:100px;
+	width:150px;
 	height:40px;
 	padding:10px;
 	margin-top: 10px;
 	border-radius: 4px;
 	box-shadow: 0px 20px 10px -05px rgba(0,0,0,0.2);
-
-}
-input[type="submit"],input[type="reset"]
-{
-	
 	margin-left: 25%;
-	margin-right: 25%;
+	
+
 }
 
+.cart{
+	margin-left: 0 !important;
+
+
+}
 .login_form a{
 	margin-right:5px;
 	margin-top: 25px;
 }
 
+textarea{
 
+	border: 1px solid #558b2f;
+	background-color: #f9fbe7;
+	padding:2px;
+    margin-bottom: 5px;
+    width:100%;
+	background: transparent;
+	outline: none;
 
-textarea ,input[type="email"], input[type="password"],input[type="text"],input[type="digits"]
+}
+
+input[type="email"], input[type="password"],input[type="text"],input[type="digits"]
 {
 	border:none;
 	border-bottom: 1px solid #558b2f;

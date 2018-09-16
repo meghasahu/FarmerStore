@@ -2,27 +2,44 @@
 <html>
 <head>
 	<title>Famer Store</title>
+  <link rel="icon" href="images/iconpage.jpg" type="image/jpeg" sizes="16x16">
 	<link rel="stylesheet" type="text/css" href="css/nav.css"></link>
 	<link  rel="Stylesheet" type="text/css" href="css/basic.css" ></link>
 	<link rel="stylesheet" type="text/css" href="css/forForms.css"></link>
   <link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.min.css"></link>
 	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <style>
+
+</style>
 </head>
 <body>
+
+
 <header>
 <img src="images/iconFarm.png" alt="icon" width="3%" height="10%">
 <h2 >Famer Store</h2>
 <input placeholder="Search" style="width:30%;margin-bottom:5px;margin-left:20px;padding:1%;background-color: #f9fbe7;border-radius: 5px;height:40px;">
 </header>
-<nav>
-<ul>
-<li><a href="#" class="active">Home </a></li>
-<li><a href="store.html"> Store </a></li>
-<li><a href="e-learn.html">E-learn</a></li>
-<li><a href="about_us.html"> About us</a></li>
-<li><a href="contact_us.html">Contact us </a></li>
-<li class="special"><a href=""> My Account<i class="fa fa-caret-down" style="margin-left:1em"></i></a></li>
-</ul>
+
+
+<nav class="nav" id="mynav">
+
+<a href="#" class="active">Home </a>
+<a href="store.html"> Store </a>
+<a href="e-learn.html">E-learn</a>
+<a href="about_us.html"> About us</a>
+<a href="contact_us.html">Contact us </a>
+
+<div class="dropdown">
+   <div class="dropbtn"> <a > My Account <i class="fa fa-caret-down"></i> </a> </div>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 </nav>
 <!-- Slideshow container -->
 <div class="slideshow-container">
@@ -48,6 +65,7 @@
 	<img src="images/iconFarm.png">
 	<div class="container">
 		<input type="submit" value="Add to Cart" class="cart" onclick="">
+    <i class="fa fa-heart-o" style="font-size: 24px;margin-left: 20px"></i>
 	</div>
 
 <script type="text/javascript">
@@ -67,6 +85,17 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block"; 
     setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+
+/* Toggle between adding and removing the "responsive" class to the navbar when the user clicks on the icon */
+function myFunction() {
+    var x = document.getElementById("mynav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+}
+
 </script>
 </body>
 </html>

@@ -5,6 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="css/nav.css"></link>
 	<link  rel="Stylesheet" type="text/css" href="css/basic.css" ></link>
 	<link rel="stylesheet" type="text/css" href="css/forForms.css"></link>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.min.css"></link>
+
 	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body>
@@ -23,7 +25,58 @@
 </ul>
 </nav>
 
-
 <!--changed part -->
+<div class="row">
+	<div class="col-12">
+	<h1> Contact us </h1>
+	</div>
+</div>
+<div class="row">
+
+<div class="col-6" >
+
+	<div id="map" style="height:600px;background:yellow"></div>
+  
+</div>
+
+<div class="col-6" >
+  <h2 ><i class="fa fa-address-card"></i> Address</h2>
+  <p>Collector’s Colony, R C Marg,</p><p>Chembur, Mumbai -74</p>
+  <p><i class="fa fa-phone"></i> Phone No. 123456789/ 987654321 </p><br>
+
+<div class="form">
+    <div>
+	<label>Name :</label>
+	<input type="text" id="name_contact"></input>
+	</div>
+	<div>
+		<label>Email id :</label>
+		<input type="text" id="email_contact"></input>
+	</div>
+	<div>
+		<label>Phone No:</label>
+		<input type="text" id="phone"></input>
+	</div>
+	<div>
+		<label>Your Enquiry : </label>
+		<textarea rows="6" ></textarea>
+</div>
+<input type="submit" value="Send" style="margin-left:40%"></input>
+</div>
+
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(19.032801,72.896355);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 5};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3qgE5G9E-uBkTIo81885_m5XDx1QMeR4&callback=myMap"></script>
+
+
 </body>
 </html>

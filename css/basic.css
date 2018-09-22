@@ -2,7 +2,7 @@
 		box-sizing: border-box;
 }
 
-@media only screen and (min-width: 700px){
+@media only screen and (min-width: 768px){
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -16,6 +16,12 @@
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+
+#cen{
+	margin-left: 25%;
+}
+
+
 
 }
 
@@ -39,7 +45,8 @@
 
 body{
 
-	background: #f9fbe7;
+	/*background: #f9fbe7;*/
+	background: white;
 	padding: 0;
 	margin:0;
 }

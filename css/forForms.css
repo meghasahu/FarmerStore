@@ -21,6 +21,14 @@ header h2{
 	margin:5px;
 }
 
+@media only screen and (max-width: 768px){
+
+	.cen{
+	margin-left: 25%;
+}
+
+}
+
 .change{
 	display: block;
 	position: fixed;
@@ -81,6 +89,10 @@ header h2{
 	margin-left: 10%;
 }
 
+.form tr{
+	border:2px solid white;
+}
+
 h1{
 	background: #558b2f;
 	width:100%;
@@ -138,15 +150,19 @@ input[type="submit"], input[type="reset"]
 	background-color: #558b2f;
 	color:white;
 	border:none;
-	width:150px;
+	width:10%;
+	min-width: 70px;
 	height:40px;
 	padding:10px;
 	margin-top: 10px;
 	border-radius: 4px;
 	box-shadow: 0px 20px 10px -05px rgba(0,0,0,0.2);
-	margin-left: 25%;
 	
 
+}
+
+.button_cen{
+	margin-left: 45%;
 }
 
 .cart{
@@ -171,7 +187,7 @@ textarea{
 
 }
 
-input[type="email"], input[type="password"],input[type="text"],input[type="digits"]
+input[type="email"], input[type="password"],input[type="text"],input[type="digits"],input[type="number"],input[type="name"]
 {
 	border:none;
 	border-bottom: 1px solid #558b2f;

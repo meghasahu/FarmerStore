@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Famer Store</title>
-	<link rel="icon" href="images/iconpage.jpg" type="image/jpeg" sizes="16x16">
+  <link rel="icon" href="images/iconpage.jpg" type="image/jpeg" sizes="16x16">
 	<link rel="stylesheet" type="text/css" href="css/nav.css"></link>
 	<link  rel="Stylesheet" type="text/css" href="css/basic.css" ></link>
 	<link rel="stylesheet" type="text/css" href="css/forForms.css"></link>
@@ -11,14 +11,19 @@
   <script type="text/javascript" src="js/responsiveNav.js"></script>
 </head>
 <body>
+
+
 <header>
 <img src="images/iconFarm.png" alt="icon" width="3%" height="10%">
 <h2 >Famer Store</h2>
+<input placeholder="Search" style="width:30%;margin-bottom:5px;margin-left:20px;padding:1%;background-color: #f9fbe7;border-radius: 5px;height:40px;">
 </header>
+
+
 <div class="navbar" id="mynav">
 
 <a href="Home.html">Home </a>
-<a href="store.html" class="active"> Store </a>
+<a href="store.html"> Store </a>
 <a href="e-learn.html">E-learn</a>
 <a href="about_us.html"> About us</a>
 <a href="contact_us.html">Contact us </a>
@@ -35,7 +40,23 @@
 <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
+<form method="post" action="#">
 
-<!--changed part -->
+<div class="row">
+  <div class="col-6 form" id="cen" style="margin-top:2%;" >
+
+    <input type="radio" name="database" checked="true">Address :</input>
+    <textarea rows="4" id="old" disabled="true"></textarea>
+
+    <input type="radio" name="entered" >New Address :</input>
+    <textarea rows="4" id="new" disabled="true"></textarea>
+    
+    <div class="button_cen">
+    <input type="submit"  name="confirm_add" value="Confirm" onclick=""></input>
+    </div>
+     
+  </div>
+</div>
+</form>
 </body>
 </html>

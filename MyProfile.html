@@ -40,44 +40,44 @@
 
 <div class="row">
   <div class="col-6 form" id="cen">
+
+    <h1>My Profile </h1>
     
-    <table align="center">
-    <tr>
-    <td>
-    Name : </td><td><input type="name" name="" disabled="true" value="data"></input> </td><td>
-      <a>edit</a>
-    </td>
-    </tr>
-
-    <tr>
-      <td>
-        Email Id : </td><td><input type="email" name="" disabled="true" value="data"></input> </td><td>
-      <a>edit</a>
-      </td>
-    </tr>
-  <tr>
-    <td>
-    Aadhar Number : </td><td><input type="number" name="" disabled="true" value="data"></input> </td><td>
-      <a>edit</a>
-    <td>
-</tr>
-<tr>
-  <td>
-    Phone Number : </td><td><input type="number" name="" disabled="true" value="data"></input> </td><td>
-      <a>edit</a>
-  </td>
-  </tr>
-  <tr>
-    <td>
-    Address : </td><td> <textarea rows="4" disabled="true"></textarea> </td><td>
-      <a>edit</a>
-  </td>
-  </tr>
-
-</table>
-</div>
+    <div class="profile_box">
+    <h3>Name  : <input type="submit" id="save_name" value="Save" style="float: right;display: none"> <a id="a_name" style="color:blue;float:right;margin-right: 10%" onclick="update_name()">edit</a></h3>
+    <input type="name" name="" disabled="true" value="data"></input> 
+      
+      <h3>  Email Id : <input type="submit" value="Save" style="float: right;display: none;margin-right: 10%"><a style="color:blue;float:right;margin-right: 10%" onclick="update_email()">edit</a></h3>
+   <input type="email" name="" disabled="true" value="data"></input> 
+      
+    <h3>Aadhar Number : <small style="color: red">To update contact to customer care</small><input type="submit" value="Save" style="float: right;display: none"></h3><input type="number" name="" disabled="true" value="data"></input> 
+    
+    <h3>Phone Number : <input type="submit" value="Save" style="float: right;display: none"><a style="color:blue;float:right;margin-right: 10%" onclick="update_phone()">edit</a><h3><input type="number" name="" disabled="true" value="data"></input> 
+  
+    <h3>Address : <input type="submit" value="Save" style="float: right;display: none"><a style="color:blue;float:right;margin-right: 10%" onclick="update_address()">edit</a> </h3><textarea rows="4" disabled="true"></textarea>
+  </div>
   </div>
 </div>
+<script type="text/javascript">
+  function update_name(){
 
+    //document.getElementById("farmer").style.background="#558b2f";
+
+    document.getElementById("save_name").style.display="block";
+
+    document.getElementById("a_name").style.display="none";
+
+
+  }
+  function update_email(){
+
+  }
+  function update_phone(){
+
+  }
+  function update_address(){
+
+  }
+</script>
 </body>
 </html>

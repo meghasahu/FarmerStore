@@ -73,6 +73,10 @@ header h2{
 
 }
 
+.profile_box{
+	margin:5%;
+}
+
 .login3{
 	display: none;
 	position:fixed;

@@ -1,5 +1,6 @@
 *{
 		box-sizing: border-box;
+
 }
 
 @media only screen and (min-width: 768px){
@@ -45,10 +46,10 @@
 
 body{
 
-	/*background: #f9fbe7;*/
-	background: white;
+	background: #f9fbe7;
 	padding: 0;
 	margin:0;
+	overflow-x: hidden;
 }
 
 header
@@ -61,5 +62,4 @@ header
 	margin-bottom: 0;
 	
 }
-
 

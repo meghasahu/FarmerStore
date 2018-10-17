@@ -1,3 +1,4 @@
+
 body{
 	margin:0;
 	padding: 0;
@@ -128,9 +129,11 @@ h1{
 	padding: 14px 16px;
 	text-align: center;
 	border:1px solid #c5e1a5;
+	background: white;
 
 
 }
+
 
 .change ul li a:hover{
 	cursor: pointer;
@@ -138,11 +141,10 @@ h1{
 	color: black;
 }
 
-.active{
+.change ul li a .active{
 	background-color: #558b2f;
 	color: white;
 }
-
 a:active{
 	background-color: #558b2f;
 	color: white;
@@ -179,6 +181,7 @@ input[type="submit"], input[type="reset"]
 	margin-top: 25px;
 }
 
+
 textarea{
 
 	border: 1px solid #558b2f;
@@ -204,3 +207,76 @@ input[type="email"], input[type="password"],input[type="text"],input[type="digit
 	outline: none;
 
 }
+
+/* code added for otp page by prajakta*/
+
+.modal1{
+	display: block;
+	border-width: 10px solid #7cb342;
+	margin-top: 8%;
+	border-radius: 10px;
+	box-shadow: 0px 17px 10px 10px rgba(0,0,0,0.3);
+
+}
+
+.modal2{
+	display: block;
+	border-width: 10px solid #7cb342;
+	margin-top:5px;
+	border-radius: 10px;
+	box-shadow: 0px 17px 10px 10px rgba(0,0,0,0.3);
+	    width:90%;
+	margin-left:5%;
+
+}
+
+.modal3{
+	display: block;
+	border-width: 10px solid #7cb342;
+	margin-top:5px;
+	border-radius: 10px;
+
+}
+
+.size1{
+	    width:50%;
+	margin-left: 25%;
+}
+
+.size2{
+    width:40%;
+	margin-left: 32%;
+	height:80%;
+}
+
+.h1{
+	background: #558b2f;
+	width:70%;
+	padding: 2px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 20%;
+    padding: 10px;
+    height: 500px;
+	background-color:#7cb342;
+	color:white;
+	text-align:center;
+	border-radius: 4px;
+	font-weight: bold;
+}
+.column1 {
+    flex: 80%;
+	padding: 10px;
+    height: 500px;
+	margin-left: 0px;
+}
+
+

@@ -18,7 +18,7 @@
         <div id="change" class="change">
         <ul>
           <li>
-        <a onclick="loadBuyer()" class="active" id="buyer">Login Buyer</a></li>
+        <a onclick="loadBuyer()" id="buyer">Login Buyer</a></li>
         <li>
         <a onclick="loadFarmer()" id="farmer">Login Farmer</a></li>
         <li>
@@ -27,11 +27,11 @@
       <div class="modal login1" id="modal">
         <div class="login_form">
         <h1>Buyer Login Here</h1>
-        <form >
-        <input type="email" class="in" placeholder="Enter email">
-        <input type="password" class="in" placeholder="Password">
+        <form action="login.php" method="post">
+        <input type="email" class="in" name="email_buyer" placeholder="Enter email">
+        <input type="password" class="in" name="pass_buyer" placeholder="Password">
         <div class="button_cen">
-        <input type="submit" id="sign_in" value="Login"></div>
+        <input type="submit" id="sign_in" name="buyer_log" value="Login"></div>
         <div>
         <a href="firstPage.html">forgot password</a>
         <a href="register.html">New user? Register Here !</a>
@@ -45,11 +45,11 @@
     <div class="login2" id="login2">
     <div class="login_form">
         <h1>Farmer Login Here</h1>
-        <form >
-        <input type="email" class="in" placeholder="Enter email">
-        <input type="password" class="in" placeholder="Password">
+        <form action="login.php" method="post">
+        <input type="email" class="in" name="email_farmer" placeholder="Enter email">
+        <input type="password" class="in" name="pass_farmer" placeholder="Password">
          <div class="button_cen">
-        <input type="submit" id="sign_in2" value="Login"></div>
+        <input type="submit" id="sign_in2" name="farmer_log" value="Login"></div>
 
         <div>
         <a href="firstPage.html">forgot password</a>
@@ -63,11 +63,11 @@
   <div class="login3" id="login3">
     <div class="login_form">
         <h1>Admin Login Here</h1>
-        <form >
-        <input type="email" class="in" placeholder="Enter email">
-        <input type="password" class="in" placeholder="Password">
+        <form action="login.php" method="post">
+        <input type="email" class="in" name="email_admin" placeholder="Enter email">
+        <input type="password" class="in" name="pass_admin" placeholder="Password">
          <div class="button_cen">
-        <input type="submit" id="sign_in3" value="Login"></div>
+        <input type="submit" id="sign_in3" name="admin_log" value="Login"></div>
 
         <div>
         <a href="firstPage.html">forgot password</a>

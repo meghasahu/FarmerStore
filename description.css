@@ -1,0 +1,140 @@
+
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+
+
+}
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+}
+
+.modal{
+	
+	position:auto;
+	border-width: 10px solid #7cb342;
+	
+}
+
+
+/* For mobile phones: */
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width:300px; height:400px:}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 60%; height:250px;margin-left:5%;margin-top:2%;}
+    .col-7 {width: 90%;height:370px;margin-left:5%;margin-top:2%;margin-bottom:4% ;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+.col-25 {
+    float: left;
+    width: 35%;
+    
+	font-family:Arial;
+	font:bold;
+font-size:20px;
+	background: transparent;
+	outline: none;
+}
+.form{
+	border:1px solid #7cb342;
+	box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.7);
+	padding: 10px;
+	margin:5px;
+	
+}
+
+.col-76{
+float: left;
+   
+	font-family:Arial;
+	font:bold;
+font-size:20px;
+
+	padding:2px;
+    margin-bottom: 5px;
+    width:50%;
+	height:30px;
+	background: transparent;
+	outline: none;
+	
+margin-left:180px;
+}
+input[type="submit"], input[type="reset"]
+{
+	background-color: #558b2f;
+	color:white;
+	border:none;
+	width:auto;
+	min-width: 70px;
+	height:40px;
+	padding:10px;
+	margin-top: 10px;
+	border-radius: 4px;
+	box-shadow: 0px 20px 10px -05px rgba(0,0,0,0.2);
+	
+
+}
+
+.col-75 {
+    float: left;
+   
+	font-family:Arial;
+	font:bold;
+font-size:20px;
+
+	padding:2px;
+    margin-bottom: 5px;
+    width:50%;
+	height:30px;
+	background: transparent;
+	outline: none;
+}
+}
+input[type=text] {
+    border: none;
+}
+.modal{
+	display: block;
+	position:auto;
+	border-width: 10px solid #7cb342;
+	border-radius: 10px;
+	box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+.size{
+    
+	margin-left: 15%;
+	margin-bottom:3%;
+	margin-top:3%;
+	width:70%;
+	height:auto;
+	
+	
+
+}
+
+textarea {
+    width: 60%;
+    height: 100px;
+	background: transparent;
+	outline: none;
+ border:none;
+    
+}
+.cent{
+margin-left:30%;
+float:center;}

@@ -13,7 +13,7 @@ Called by CallerService.php.
 # also use your own API username that you created on PayPal’s sandbox
 # or the PayPal live site
 */
-define('API_USERNAME', '2016.megha.sahu_api1.ves.ac.in');
+define('API_USERNAME', '2016.megha.sahu@ves.ac.in');
 /**
 # API_password: The password associated with the API user
 # If you are using your own API username, enter the API password that

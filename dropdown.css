@@ -1,0 +1,74 @@
+
+* {
+    box-sizing: border-box;
+}
+.fa-cart-arrow-down:before{content:"\f218"}
+
+.fa-columns:before{content:"\f0db"}
+
+
+.dropdown1 {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown1 .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+
+
+.dropdown1-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown1-content a:hover {
+    background-color: #FFF;
+	}
+.dropdown1:hover .dropdown-content {
+    display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column1 {
+    float: left;
+    width: 30.33%;
+    padding: 2px;
+    background-color:#FFF;
+    height: 480px;
+}
+
+.column1 a {
+    float: none;
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.column1 a:hover {
+    background-color:#FFF;
+}
+
+/* Clear floats after the columns */
+.row1:after {
+    content: "";
+    display: table;
+    clear: both;
+	
+}
+.fa-angle-right:before{content:"\f105"}
+.fa-angle-double-right:before{content:"\f101"}.fa-angle-double-up:before{content:"\f102"}

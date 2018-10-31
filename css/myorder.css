@@ -1,0 +1,287 @@
+body{
+	margin:0;
+	padding: 0;
+	height:100%;
+}
+
+.icon{
+	margin-left: 5px;
+	
+}
+
+header h2{
+	display:inline;
+	width: 100%;
+}
+
+.form{
+	border:1px solid #7cb342;
+	box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.7);
+	padding: 10px;
+	margin:5px;
+}
+
+@media only screen and (max-width: 768px){
+
+	.cen{
+	margin-left: 25%;
+}
+
+}
+
+.change{
+	display: block;
+	position: fixed;
+	min-width:40%;
+	min-height:40%;
+	margin-left: 35%;
+	margin-top: 5%;
+}
+
+
+.modal{
+	display: block;
+	border-width: 10px solid #7cb342;
+	margin-top: 10%;
+	border-radius: 10px;
+	box-shadow: 0px 17px 10px 10px rgba(0,0,0,0.3);
+}
+
+.size{
+    width:70%;
+	margin-left: 15%;
+
+}
+
+.login1{
+	width:30%;
+	height:40%;
+
+}
+
+
+.login2{
+	display: none;
+	position:fixed;
+	width:30%;
+	height:40%;
+	border-width: 10px solid #7cb342;
+	margin-top: 5px;
+	border-radius: 10px;
+	box-shadow: 0px 17px 10px 10px rgba(0,0,0,0.3);
+
+}
+
+.profile_box{
+	margin:5%;
+}
+
+.login3{
+	display: none;
+	position:fixed;
+	width:30%;
+	height:40%;
+	border-width: 10px solid #7cb342;
+	margin-top: 5px;
+	border-radius: 10px;
+	box-shadow: 0px 17px 10px 10px rgba(0,0,0,0.3);
+}
+.login_form{
+	display: block;
+	width:80%;
+	margin-left: 10%;
+}
+
+.form tr{
+	border:2px solid white;
+}
+
+h1{
+	background: #558b2f;
+	width:100%;
+	padding: 2px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+}
+
+.change li
+{
+	height:40px;
+	display: inline;
+	float: left;
+	box-shadow: 0 -5px 5px -5px rgba(0,0,0,0.2);
+}
+
+.change ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #f9fbe7;
+}
+
+.change li a{
+	text-decoration: none;
+	display: block;
+	padding: 14px 16px;
+	text-align: center;
+	border:1px solid #c5e1a5;
+
+
+}
+
+.change ul li a:hover{
+	cursor: pointer;
+	background-color: #558b2f;
+	color: black;
+}
+
+.active{
+	background-color: #558b2f;
+	color: white;
+}
+
+a:active{
+	background-color: #558b2f;
+	color: white;
+
+}
+	
+input[type="submit"], input[type="reset"]
+{
+	background-color: #558b2f;
+	color:white;
+	border:none;
+	width:18%;
+	min-width: 70px;
+	height:40px;
+	padding:10px;
+	margin-top: 10px;
+	border-radius: 4px;
+	box-shadow: 0px 20px 10px -05px rgba(0,0,0,0.2);
+	
+
+}
+
+.button_cen{
+	margin-left: 45%;
+}
+
+.cart{
+	margin-left: 0 !important;
+
+
+}
+.login_form a{
+	margin-right:5px;
+	margin-top: 25px;
+}
+
+textarea{
+
+	border: 1px solid #558b2f;
+	background-color: #f9fbe7;
+	padding:2px;
+    margin-bottom: 5px;
+    width:100%;
+	background: transparent;
+	outline: none;
+
+}
+
+input[type="email"], input[type="password"],input[type="text"],input[type="digits"],input[type="number"],input[type="name"]
+{
+	border:none;
+	border-bottom: 1px solid #558b2f;
+	background-color: #f9fbe7;
+	padding:2px;
+    margin-bottom: 5px;
+    width:75%;
+	height:30px;
+	background: transparent;
+	outline: none;
+
+}
+
+.modal1{
+	display: block;
+	border-width: 10px solid #7cb342;
+	margin-top: 8%;
+	border-radius: 10px;
+	box-shadow: 0px 17px 10px 10px rgba(0,0,0,0.3);
+
+}
+
+.modal2{
+	display: block;
+	border-width: 10px solid #7cb342;
+	margin-top:5px;
+	border-radius: 10px;
+	box-shadow: 0px 17px 10px 10px rgba(0,0,0,0.3);
+	    width:90%;
+	margin-left:5%;
+
+}
+
+.modal3{
+	display: block;
+	border-width: 10px solid #7cb342;
+	margin-top:5px;
+	border-radius: 10px;
+
+}
+
+.size1{
+	    width:50%;
+	margin-left: 25%;
+}
+
+.size2{
+    width:40%;
+	margin-left: 32%;
+	height:80%;
+}
+
+.h1{
+	background: #558b2f;
+	width:70%;
+	padding: 2px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 10.5%;
+    left: 0;
+    background-color: #689f38;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 16px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    display: block;
+	text-align:left;
+	font-family:Arial;
+}
+
+.sidenav a:hover {
+    color: black;
+	background-color:white;
+}
+
+
+.images{
+	float:left;
+	width:42px;
+	height:42px;
+}

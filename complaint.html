@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="images/iconpage.jpg" type="image/jpeg" sizes="16x16">
+<link rel="stylesheet" type="text/css" href="css/reg.css"></link>
+<link rel="stylesheet" type="text/css" href="css/basic.css"></link>
+<link rel="stylesheet" type="text/css" href="css/farmer.css"></link>
+
+
+<title >Complaint Box</title>
+</head>
+<body class="p1">
+<header>
+     <div>
+     <img class="icon" src="images/iconFarm.png" alt="icon" width="5%" height="5%">
+     <h2 >Farmer Store</h2>
+     </div>
+</header>
+<body>
+<div class="sidenav">
+  <a href="addProductFarmer.php">Add Product</a>
+  <a href="myproducts.php">My Products</a>
+  <a href="farmerorder.php">Order</a>
+  <a href="complaint.html">Complaint</a>
+  <a href="myProfile.php">My Profile</a>
+  <a href="php/logout.php">Log Out</a>
+</div>
+
+<form action="feedback.php" method="post">
+<div class="col-6 form" id="cen" >
+  <h1>Write to us</h1>
+	
+		Email Id :
+		<input type="email" id="email_contact" name="email" required><br>
+	
+
+		Write Your Complaint: 
+		<textarea rows="6" name="feedback" required></textarea><br>
+
+<input type="submit" value="Update" style="margin-left:40%" name="sendFeedback">
+</div>
+</form>
+
+
+</body>
+</html>

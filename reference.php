@@ -6,7 +6,7 @@ $conn = new mysqli('localhost','root','', 'farmerstore');
     }
 
 $query = "select * from buyerverification as bv inner join buyer as b on bv.id=b.id and bv.aadhar_status='pending'";
-$result = mysqli_query($conn,$query);
+$result = mysqli_query($conn,$query) or die("cannot execute");
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,7 +17,7 @@ $result = mysqli_query($conn,$query);
 	<link  rel="Stylesheet" type="text/css" href="css/basic.css" ></link>
 	<link rel="stylesheet" type="text/css" href="css/forForms.css"></link>
   <link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.min.css"></link>
-  <link rel="stylesheet" type="text/css" href="css/farmer.css"></link>
+  <link rel="stylesheet" type="text/css" href="css/addProduct.css"></link>
     <link rel="stylesheet" type="text/css" href="css/request.css"></link>
 	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
   
@@ -45,7 +45,6 @@ function googleTranslateElementInit() {
 <div class="sidenav" >
   <a href="reference.php">Approve Buyer</a>
   <a href="referencefarm.php">Approve Farmer</a>
-  <a href="adminProfile.php">My Profile</a>
    <a href="php/logout.php">Logout <i class="fa fa-power-off" style="margin-left: 5%"></i></a>
 </div>
 
@@ -64,7 +63,7 @@ while($row = mysqli_fetch_assoc($result)){ ?>
 	<ul class="w3-ul w3-card-4">
 	<li class="w3-bar">
 		<div>
-			<img src="images/user.png" class="w3-bar-item w3-circle" onclick="location.href='order.html'" style="width:150px">
+			<img src="images/user.png" class="w3-bar-item w3-circle" onclick="location.href='adminuserdetail.php\?temp=buyer\&i='+<?php echo $row['id'] ?>" style="width:150px">
 			<div class="w3-bar-item">
 				<br>
 				<br>
@@ -73,8 +72,8 @@ while($row = mysqli_fetch_assoc($result)){ ?>
 			</div>
 			<br>
 			<br>
-			<button id="accept"  style="width:55px;height:55px" onclick="location.href='order.html'"><img src="images/correct.png" style="width:45px" /></button>&nbsp
-			<button id="reject"  style="width:55px;height:55px" onclick="location.href='order.html'"><img src="images/reject.png" style="width:45px" /></button>
+			<button id="accept"  style="width:55px;height:55px" onclick="location.href='approve.php\?tab=<?php echo $table ?>&i=<?php echo $id ?>'"><img src="images/correct.png" style="width:45px" /></button>&nbsp
+			<button id="reject"  style="width:55px;height:55px" onclick="location.href='reject.php\?tab=<?php echo $table ?>&i=<?php echo $id ?>'"><img src="images/reject.png" style="width:45px" /></button>
 		</div>
 	</li>
   </ul>

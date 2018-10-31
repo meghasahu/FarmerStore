@@ -42,6 +42,10 @@
 	[class*="col-"] {
     width:100%;
 }
+
+#search{
+	display: none;
+}
 }
 
 body{
@@ -62,4 +66,18 @@ header
 	margin-bottom: 0;
 	
 }
+
+footer{
+	background-color:#558b2f;
+	position: fixed;
+	width:100%;
+	display: block;
+}
+
+footer a{
+	text-decoration: none;
+}
+
+
+
 

@@ -254,13 +254,14 @@ input[type="email"], input[type="password"],input[type="text"],input[type="digit
 
 .sidenav {
     height: 100%;
-    width: 200px;
+    width: 160px;
     position: fixed;
     z-index: 1;
-    top: 8%;
+    top: 11.5%;
     left: 0;
     background-color: #689f38;
     overflow-x: hidden;
+    padding-top: 20px;
 }
 
 .sidenav a {
@@ -269,7 +270,7 @@ input[type="email"], input[type="password"],input[type="text"],input[type="digit
     font-size: 16px;
     color: white;
     display: block;
-	text-align:left;
+	text-align:center;
 	font-family:Arial;
 }
 
@@ -279,3 +280,12 @@ input[type="email"], input[type="password"],input[type="text"],input[type="digit
 }
 
 
+.images{
+	float:left;
+	width:42px;
+	height:42px;
+}
+.sidenav .current{
+	color: black;
+	background-color:#eeeeee;
+}

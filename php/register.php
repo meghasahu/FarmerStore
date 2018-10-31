@@ -35,7 +35,10 @@ if(isset($_POST['submit'])){
 
 	$email = (string)$_POST['email'];
 
-	$pass = (string)$_POST['password'];
+	$p = (string)$_POST['password'];
+
+	echo "\n pass \n".$p."\n";
+	$pass = md5($p);
 
 	//may be farmer doesnt have email hence email can be null
 
@@ -79,7 +82,8 @@ else{
 	}
 	if (file_exists("teecom/upload/" . $_FILES["aadhar"]["name"]))
 	{
-   move_uploaded_file($_FILES["aadhar"]["tmp_name"],"teecom/upload/" . $_FILES["aadhar"]["name"] . "1"); 
+   move_uploaded_file($_FILES["aadhar"]["tmp_name"],"teecom/upload/" . $_FILES["aadhar"]["name"] . "1");
+   $aadhar_file = "teecom/upload/" . $_FILES["aadhar"]["name"] . "1";
 	}
 	else
 	{
@@ -91,7 +95,7 @@ else{
 
 	echo "hello ".$user_text;
 
-$query= "insert into $user_text (title,firstName,middleName,lastName,Gender,dateOfBirth,address,city,pincode,phone,email,password,account_holder_name,bank_name,bank_account_no,ifsc,aadhar_file) values(\"$title_text \",\" $first \",\"$middle\" , \"$last\" , \"$gender_text\" ,$date,\"$address\" ,\"$city\", pincode ,$phone , \"$email\" ,\"$pass\", \"$holder_name\" , \"$bank_name\" ,$account, $ifsc , \"$aadhar_file\");";
+$query= "insert into $user_text (title,firstName,middleName,lastName,Gender,dateOfBirth,address,city,pincode,phone,email,password,account_holder_name,bank_name,bank_account_no,ifsc,aadhar_file) values(\"$title_text \",\" $first \",\"$middle\" , \"$last\" , \"$gender_text\" ,$date,\"$address\" ,\"$city\",$pincode ,$phone , \"$email\" ,\"$pass\", \"$holder_name\" , \"$bank_name\" ,$account, $ifsc , \"$aadhar_file\");";
 
 $res=mysqli_query($conn,$query);
 
@@ -122,4 +126,5 @@ echo 'fail';
 $conn->close();
 }
 }
+header('Location: ../login.html');
 ?>

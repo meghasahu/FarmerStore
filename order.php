@@ -1,4 +1,6 @@
 <?php
+
+//my cart
 //starting session
 session_start();
 if(!isset($_SESSION['user']))
@@ -21,6 +23,7 @@ $conn = new mysqli('localhost','root','', 'farmerstore');
 <head>
 <title>Farmer Store</title>
   <link rel="icon" href="images/iconpage.jpg" type="image/jpeg" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="dropdown.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/nav.css"></link>
 	<link  rel="Stylesheet" type="text/css" href="css/basic.css" ></link>
 	<link rel="stylesheet" type="text/css" href="css/forForms.css"></link>
@@ -55,8 +58,73 @@ function googleTranslateElementInit() {
 <div class="navbar" id="mynav">
 
 <a href="Home.php" class="active">Home </a>
-<a href="Store.php" class="">Store</a> 
-<a href="e-learn.html">E-learn</a>
+<div class="dropdown1">
+    <button class="dropbtn">Store 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+
+      <div class="row1" style="width:600px;background-color:white"> &nbsp
+    <br>
+        <div class="column1">
+          <div style="font-size:26px"><b>Fruits<i class="fa fa-angle-double-right" style="font-size:24px"></i></b></div>
+          <a href='store.php?temp=apple' style="font-size:24px">Apple</a>
+          <a href='store.php?temp=pomegrante' style="font-size:24px">Pomegrante</a>
+      <a href="#" style="font-size:24px">Banana</a>
+     <a href="#" style="font-size:24px">Orange</a>
+     <a href="#" style="font-size:24px">Strawberry</a>
+     <a href="#" style="font-size:24px">Cherry</a>
+     <a href="#" style="font-size:24px">Kiwi</a>
+    <a href="#" style="font-size:24px">Apricot</a>
+    <a href="#" style="font-size:24px">Papaya</a>
+     <a href="#" style="font-size:24px">Fig</a>
+    <a href="#" style="font-size:24px">Pineapple</a>
+     
+        </div> 
+        <div class="column1">
+          <div style="font-size:26px"><b>Vegitables<i class="fa fa-angle-double-right" style="font-size:24px"></i></b></div>
+          <a href="store.php?temp=onion" style="font-size:24px">Onion</a>
+          <a href="store.php?temp=potato" style="font-size:24px">Potato</a>
+      <a href="store.php?temp=pumpkin" style="font-size:24px">Pumpkin</a>
+     <a href="store.php?temp=cauliflower" style="font-size:24px">Cauliflower</a>
+     <a href="#" style="font-size:24px">Cucumber</a>
+     <a href="store.php?temp=Tomato" style="font-size:24px">Tomato</a>
+     <a href="store.php?temp=cabbage" style="font-size:24px">Cabbage</a>
+    <a href="#" style="font-size:24px">Broccoli</a>
+    <a href="#" style="font-size:24px">Beetroot</a>
+     <a href="#" style="font-size:24px">Bean</a>
+    <a href="#" style="font-size:24px">Lettuce</a>
+     
+        </div> 
+        <div class="column1">
+          <div style="font-size:26px"><b>Grain<i class="fa fa-angle-double-right" style="font-size:24px"></i></b></div>
+          <a href="#" style="font-size:24px">Toor dal gold</a>
+          <a href="#" style="font-size:22px">'Basmati Rice-Feast</a>
+      <a href="#" style="font-size:24px">Original Rajma</a>
+     <a href="#" style="font-size:24px">Bajra Pearl</a>
+     <a href="#" style="font-size:24px">Wheat</a>
+     <a href="#" style="font-size:24px">Green Gram</a>
+     <a href="#" style="font-size:24px">Urad Bean</a>
+    <a href="#" style="font-size:24px">Chick Peas</a>
+    <a href="#" style="font-size:24px">Chickpeas,brown</a>
+     <a href="#" style="font-size:24px">Common Bean</a>
+    <a href="#" style="font-size:24px">Lentil</a>
+     
+        </div> 
+      </div>
+    </div>
+  </div>
+    
+      
+
+  <div class="dropdown1">
+    <button class="dropbtn">E-learn <i class="fa fa-caret-down"></i> 
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Videos</a>
+      <a href="#">Guidelines</a>
+    </div>
+</div>  
 <a href="about_us.html"> About us</a>
 <a href="contact_us.html">Contact us </a>
 <a href="login.html" id="log" style="float: right;display: none;">Login/SignUp</a>
@@ -78,14 +146,13 @@ function googleTranslateElementInit() {
   <div class="col-6 form" id="cen">
   <h1>Order Now</h1>
   <?php 
-    $q = mysqli_query($conn,"select user_id,prod_id,total_price,count(prod_id) as quantity from cart where user_id='$userid' group by prod_id" ) or die("empty cart");
+    $q = mysqli_query($conn,"select user_id,prod_id,total_price,sum(quantity) as quantity from cart where user_id='$userid' group by prod_id" ) or die("empty cart");
     $total=0;
     while($sql = mysqli_fetch_assoc($q))
       { 
         $price=$sql['total_price']*$sql['quantity'];
         $total=$price+$total;
-        $collection = (new MongoDB\Client)->farmerstore->product;
-        
+        $collection = (new MongoDB\Client)->farmerstore->product;    
         $query = array('_id' => new MongoDB\BSON\ObjectID($sql["prod_id"]));//product id
         $result = $collection->find($query);
       foreach($result as $mongo) { ; ?>    

@@ -1,18 +1,18 @@
 <?php 
 require 'vendor/autoload.php'; // include Composer's autoloader
 
+$search = $_GET['temp'];
 $collection = (new MongoDB\Client)->farmerstore->product;
-$query = array('keyword' => 'onion');
+$query = array('keyword' => $search);
 
 $cursor = $collection->find($query);
-
-
  ?>
 <!DOCTYPE html>
 <html>
 <head>
   <title>Farmer Store</title>
   <link rel="icon" href="images/iconpage.jpg" type="image/jpeg" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="dropdown.css"></link>
   <link rel="stylesheet" type="text/css" href="css/nav.css"></link>
   <link  rel="Stylesheet" type="text/css" href="css/basic.css" ></link>
   <link rel="stylesheet" type="text/css" href="css/forForms.css"></link>
@@ -43,8 +43,73 @@ function googleTranslateElementInit() {
 <div class="navbar" id="mynav">
 
 <a href="Home.php" class="active">Home </a>
-<a href="store.php"> Store </a>
-<a href="e-learn.html">E-learn</a>
+<div class="dropdown1">
+    <button class="dropbtn">Store 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+
+      <div class="row1" style="width:600px;background-color:white"> &nbsp
+    <br>
+        <div class="column1">
+          <div style="font-size:26px"><b>Fruits<i class="fa fa-angle-double-right" style="font-size:24px"></i></b></div>
+          <a href='store.php?temp=apple' style="font-size:24px">Apple</a>
+          <a href='store.php?temp=pomegrante' style="font-size:24px">Pomegrante</a>
+      <a href="#" style="font-size:24px">Banana</a>
+     <a href="#" style="font-size:24px">Orange</a>
+     <a href="#" style="font-size:24px">Strawberry</a>
+     <a href="#" style="font-size:24px">Cherry</a>
+     <a href="#" style="font-size:24px">Kiwi</a>
+    <a href="#" style="font-size:24px">Apricot</a>
+    <a href="#" style="font-size:24px">Papaya</a>
+     <a href="#" style="font-size:24px">Fig</a>
+    <a href="#" style="font-size:24px">Pineapple</a>
+     
+        </div> 
+        <div class="column1">
+          <div style="font-size:26px"><b>Vegitables<i class="fa fa-angle-double-right" style="font-size:24px"></i></b></div>
+          <a href="store.php?temp=onion" style="font-size:24px">Onion</a>
+          <a href="store.php?temp=potato" style="font-size:24px">Potato</a>
+      <a href="store.php?temp=pumpkin" style="font-size:24px">Pumpkin</a>
+     <a href="store.php?temp=cauliflower" style="font-size:24px">Cauliflower</a>
+     <a href="#" style="font-size:24px">Cucumber</a>
+     <a href="store.php?temp=Tomato" style="font-size:24px">Tomato</a>
+     <a href="store.php?temp=cabbage" style="font-size:24px">Cabbage</a>
+    <a href="#" style="font-size:24px">Broccoli</a>
+    <a href="#" style="font-size:24px">Beetroot</a>
+     <a href="#" style="font-size:24px">Bean</a>
+    <a href="#" style="font-size:24px">Lettuce</a>
+     
+        </div> 
+        <div class="column1">
+          <div style="font-size:26px"><b>Grain<i class="fa fa-angle-double-right" style="font-size:24px"></i></b></div>
+          <a href="#" style="font-size:24px">Toor dal gold</a>
+          <a href="#" style="font-size:22px">'Basmati Rice-Feast</a>
+      <a href="#" style="font-size:24px">Original Rajma</a>
+     <a href="#" style="font-size:24px">Bajra Pearl</a>
+     <a href="#" style="font-size:24px">Wheat</a>
+     <a href="#" style="font-size:24px">Green Gram</a>
+     <a href="#" style="font-size:24px">Urad Bean</a>
+    <a href="#" style="font-size:24px">Chick Peas</a>
+    <a href="#" style="font-size:24px">Chickpeas,brown</a>
+     <a href="#" style="font-size:24px">Common Bean</a>
+    <a href="#" style="font-size:24px">Lentil</a>
+     
+        </div> 
+      </div>
+    </div>
+  </div>
+    
+      
+
+  <div class="dropdown1">
+    <button class="dropbtn">E-learn <i class="fa fa-caret-down"></i> 
+    </button>
+    <div class="dropdown-content">
+       <a href="video.html">Videos</a>
+      <a href="guideline.html">Guidelines</a>
+    </div>
+</div>  
 <a href="about_us.html"> About us</a>
 <a href="contact_us.html">Contact us </a>
 <a href="login.html" id="log" style="float: right;display: none;">Login/SignUp</a>
@@ -273,11 +338,16 @@ function googleTranslateElementInit() {
 </div>
 </div>
 <?php foreach($cursor as $document) { ?>
+
+  <form method="post" action="cartinsert.php">
   <div class="card" style="padding:1em;">
   <img class="card_img" src="<?php echo $document['image']; ?>" onclick="location.href='description.php\?temp=<?php echo $document['_id'];?>'">
-  <div><label><?php echo $document['product_name']; ?></label><label style="float: right;">&#x20b9 <?php echo $document['price']; ?></label></div>
-    <input type="submit" value="Add to Cart" class="cart" onclick="location.href='cartinsert.php\?temp=<?php echo $document['_id'];?>\&quantity=10'">
+  <div><label><?php echo $document['product_name']; ?></label></div><div><label>&#x20b9 <?php echo $document['price']; ?></label><input name="quantity" type="number" min="10" value="10" style="float:right;width:20%">
+    <input name="temp" type="text" style="display:none;" value="<?php echo $document['_id'];?>">
   </div>
+    <input type="submit" value="Add to Cart" class="cart">
+  </div>
+</form>
 <?php } ?>
 
 </body>

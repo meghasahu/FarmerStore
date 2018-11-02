@@ -1,6 +1,6 @@
 <?php
 
-require 'dbcredential.php';
+require '../dbcredential.php';
 
 $query = "CREATE TABLE admin (admin_id varchar(50) NOT NULL primary key,password varchar(100) NOT NULL);";
  $result = mysqli_query($conn,$query) or die("cannot create execute");

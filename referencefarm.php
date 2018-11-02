@@ -63,7 +63,7 @@ while($row = mysqli_fetch_assoc($result)){ ?>
 	<ul class="w3-ul w3-card-4">
 	<li class="w3-bar">
 		<div>
-			<img src="images/user.png" class="w3-bar-item w3-circle" onclick="location.href='adminuserdetail.php\?temp=\&i='+<?php echo $row['id'] ?>" style="width:150px">
+			<img src="images/user.png" class="w3-bar-item w3-circle" onclick="location.href='adminuserdetail.php\?temp=farmer\&i='+<?php echo $row['id'] ?>" style="width:150px">
 			
 			<div class="w3-bar-item">
 				<br>
@@ -78,11 +78,9 @@ while($row = mysqli_fetch_assoc($result)){ ?>
 		</div>
 	</li>
   </ul>
-<?php }  ?>
+<?php } } ?>
 </div>
 </div>
 </form>
 </body>
 </html>
-
-  

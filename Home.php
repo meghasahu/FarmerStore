@@ -23,7 +23,7 @@ $collection = (new MongoDB\Client)->farmerstore->product;
   <script type="text/javascript" src="js/responsiveNav.js"></script>
 
   <!--for search -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
   
 </head>
 <body>
@@ -172,7 +172,24 @@ foreach($cursor as $document) { ?>
     <input type="submit" value="Add to Cart" class="cart"></div>
 
 </form> 
+<!--remove from here -->
+<label class="home_label">Fruits </label>
+ <div class="one_product">
+<br>
+   
+<form action="cartinsert.php" method="post">
+<div class="card" style="padding:1em;">
+  <img class="card_img" src="<?php echo $document['image']; ?>" onclick="location.href='description.php\?temp=<?php echo $document['_id'];?>'">
+  <div><label><?php echo $document['product_name']; ?></label></div><div><label>&#x20b9 <?php echo $document['price']; ?></label><input name="quantity" type="number" min="10" value="10" style="float:right;width:20%">
+    <input name="temp" type="text" style="display:none;" value="<?php echo $document['_id'];?>">
+  </div>
+    <input type="submit" value="Add to Cart" class="cart"></div>
 
+</form> 
+
+</div>
+
+<!-- till -->
 
 <?php } ?>
 </div>

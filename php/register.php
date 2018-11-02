@@ -1,5 +1,5 @@
 <?php
-require 'dbcredential.php';
+require '../dbcredential.php';
 if(isset($_POST['submit'])){
     
 

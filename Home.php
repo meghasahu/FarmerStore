@@ -244,11 +244,11 @@ foreach ($cursor as $document) { ?>
 </div>
 <script type="text/javascript">
 
-
+var ready
 var slideIndex = 0;
 showSlides();
 
-function showSlides() {
+ready = function showSlides() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
     for (i = 0; i < slides.length; i++) {
@@ -260,6 +260,9 @@ function showSlides() {
     setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 /* Toggle between adding and removing the "responsive" class to the navbar when the user clicks on the icon */
+
+$(document).ready(ready);
+$(document).on('page:load',ready);
 
 </script>
 <!-- script to get text from search and parse it to search.php file-->

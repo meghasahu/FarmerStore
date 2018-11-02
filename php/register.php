@@ -2,6 +2,9 @@
 require '../dbcredential.php';
 if(isset($_POST['submit'])){
     
+    $query = "CREATE TABLE admin (admin_id varchar(50) NOT NULL primary key,password varchar(100) NOT NULL);";
+    $result = mysqli_query($conn,$query) or die("cannot create execute");
+
 
 
   //getting values in variables
@@ -40,6 +43,7 @@ if(isset($_POST['submit'])){
 
 	echo "\n pass \n".$p."\n";
 	$pass = md5($p);
+	echo $pass;
 
 	//may be farmer doesnt have email hence email can be null
 
@@ -92,11 +96,7 @@ else{
 
 $query= "insert into $user_text (title,firstName,middleName,lastName,Gender,dateOfBirth,address,city,pincode,phone,email,password,account_holder_name,bank_name,bank_account_no,ifsc,aadhar_file) values(\"$title_text \",\" $first \",\"$middle\" , \"$last\" , \"$gender_text\" ,$date,\"$address\" ,\"$city\",$pincode ,$phone , \"$email\" ,\"$pass\", \"$holder_name\" , \"$bank_name\" ,$account, $ifsc , \"$aadhar_file\");";
 
-$res=mysqli_query($conn,$query);
-
-if(!$res){
-	die("couldnt execute");
-}
+$res=mysqli_query($conn,$query) or die("couldnt execute");
 
 $row=mysqli_query($conn,"select id from $user_text where email=\"$email\"");
 

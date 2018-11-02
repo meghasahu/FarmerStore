@@ -1,4 +1,5 @@
 <?php
+require 'dbcredential.php';
 if(isset($_POST['submit'])){
     
 
@@ -59,12 +60,6 @@ if(isset($_POST['submit'])){
 	//getting aadhar file
 
 	//$aadhar_file = (string)$_POST['aadhar'];
-	$conn = new mysqli('localhost','root','', 'farmerstore');
-	// Check connection
-	if ($conn->connect_error) {
-    	die('Connection failed: ' . $conn->connect_error);
-    } 
-
 
 echo $email;
 	$checkEmail=mysqli_query($conn,"select email from $userType where email=\"$email\"");

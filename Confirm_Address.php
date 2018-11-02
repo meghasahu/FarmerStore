@@ -131,7 +131,7 @@ $add = mysqli_fetch_assoc($fetch);
 
 <!--<form method="post" action="paypal/confirmation.php?flag=1">-->
 
-<form method="post" action="paypal/confirmation.php?flag=1">
+<form method="post" action="verifyOTP.html">
 
 
 <div class="row">

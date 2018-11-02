@@ -248,7 +248,7 @@ var ready
 var slideIndex = 0;
 showSlides();
 
-ready = function showSlides() {
+ready = function() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
     for (i = 0; i < slides.length; i++) {

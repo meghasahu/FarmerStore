@@ -8,7 +8,7 @@ require 'vendor/autoload.php'; // include Composer's autoloader
 
 $collection = (new MongoDB\Client)->farmerstore->product;
 ?>
-
+echo "hello";
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,8 +24,7 @@ $collection = (new MongoDB\Client)->farmerstore->product;
   <script type="text/javascript" src="js/responsiveNav.js"></script>
 
   <!--for search -->
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -247,17 +246,5 @@ function showSlides() {
 
 </script>
 <!-- script to get text from search and parse it to search.php file-->
-<script>
-    $(document).ready(function(){
-    $('input.search').typeahead({
-        name: 'search',
-        remote:'php/search.php?key=%QUERY',
-        limit : 10
-    });
-});
-
-    $(document)
-    </script>
-
 </body>
 </html>

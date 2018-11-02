@@ -1,6 +1,6 @@
 <?php
 
-include(dbcredential.php);
+require 'dbcredential.php';
 
 echo "done";
 

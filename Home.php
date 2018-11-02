@@ -1,9 +1,9 @@
 <?php
 session_start();
-if(!isset($_SESSION['user']))
-{
-  header('Location: login.html');
-}
+//if(!isset($_SESSION['user']))
+//{
+  //header('Location: login.html');
+//}
 require 'vendor/autoload.php'; // include Composer's autoloader
 
 $collection = (new MongoDB\Client)->farmerstore->product;

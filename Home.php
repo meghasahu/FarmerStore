@@ -8,7 +8,6 @@ require 'vendor/autoload.php'; // include Composer's autoloader
 
 $collection = (new MongoDB\Client)->farmerstore->product;
 ?>
-echo "hello";
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +23,8 @@ echo "hello";
   <script type="text/javascript" src="js/responsiveNav.js"></script>
 
   <!--for search -->
-   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  
 </head>
 <body>
 
@@ -186,7 +186,7 @@ $cursor = $collection->find($query,['limit' => 4]);
  <div class="one_product">
 <br>
 <?php 
-foreach ($cursor as $document) { ?>
+foreach ($cursor as $document) { echo "string"; ?>
    
 <form action="cartinsert.php" method="post">
 <div class="card" style="padding:1em;">

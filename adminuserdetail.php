@@ -9,7 +9,7 @@ $conn = new mysqli('localhost','root','', 'farmerstore');
       die('Connection failed: ' . $conn->connect_error);
     }
 
- $query = "select * from $table where id= $id";
+ $query = "select * from $table where id = $id";
  $result = mysqli_query($conn,$query) or die("cannot execute");
 
  
